@@ -77,7 +77,9 @@ export function App() {
                 id="review"
                 value={review}
                 onChange={(event) => {
-                  setReview(event.target.value);
+                  const text = event.target.value.replace(/[^a-zA-Z\s]/g, "");
+
+                  setReview(text);
                   setResult(null);
                   setError("");
                 }}
