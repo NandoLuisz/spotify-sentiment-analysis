@@ -76,10 +76,15 @@ export function App() {
               <textarea
                 id="review"
                 value={review}
-                onChange={(event) => {
-                  const text = event.target.value.replace(/[^a-zA-Z\s]/g, "");
+                // onChange={(event) => {
+                //   const text = event.target.value.replace(/[^a-zA-Z\s]/g, "");
 
-                  setReview(text);
+                //   setReview(text);
+                //   setResult(null);
+                //   setError("");
+                // }}
+                onChange={(event) => {
+                  setReview(event.target.value);
                   setResult(null);
                   setError("");
                 }}
